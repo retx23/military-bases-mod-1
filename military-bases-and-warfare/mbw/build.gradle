@@ -1,0 +1,51 @@
+plugins {
+    id 'eclipse'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = '1.0.0'
+group = 'com.mbw.militarybases'
+
+base { archivesName = 'militarybases-1.20.1' }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods { mbw { source sourceSets.main } }
+        }
+        client { property 'forge.enabledGameTestNamespaces', 'mbw' }
+        server { property 'forge.enabledGameTestNamespaces', 'mbw'; args '--nogui' }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    maven {
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content { includeGroupByRegex 'software\\.bernie.*' }
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.4.9')
+    // TaCZ: DERLEME BAĞIMLILIĞI YOK (reflection ile bağlanılıyor).
+    // Test için TaCZ jar'ını run/mods/ klasörüne koyman yeterli.
+}
+
+tasks.named('jar', Jar).configure {
+    manifest.attributes([
+        'Specification-Title': 'militarybases',
+        'Implementation-Version': project.jar.archiveVersion
+    ])
+    finalizedBy 'reobfJar'
+}

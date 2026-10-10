@@ -1,0 +1,19 @@
+{
+  "structures": [
+    {
+      "structure": "mbw:red_base",
+      "weight": 1
+    },
+    {
+      "structure": "mbw:blue_base",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 62,
+    "separation": 32,
+    "salt": 1337420,
+    "spread_type": "linear"
+  }
+}

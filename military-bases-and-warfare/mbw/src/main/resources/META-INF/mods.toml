@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="mbw"
+version="1.0.0"
+displayName="Military Bases & Warfare"
+description='''
+Haritada rastgele doğan kırmızı (terörist) ve mavi (güvenli) askeri üsler.
+TaCZ silahlı akıllı askerler, toplar, havan topları ve tanklar.
+'''
+
+[[dependencies.mbw]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mbw]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mbw]]
+modId="geckolib"
+mandatory=true
+versionRange="[4.4,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mbw]]
+modId="tacz"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"

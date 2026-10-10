@@ -1,0 +1,165 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "idle": {
+      "loop": true,
+      "animation_length": 2.0,
+      "bones": {
+        "rightLeg": {
+          "rotation": {
+            "0": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "leftLeg": {
+          "rotation": {
+            "0": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "walk": {
+      "loop": true,
+      "animation_length": 1.0,
+      "bones": {
+        "rightLeg": {
+          "rotation": {
+            "0": [
+              -30,
+              0,
+              0
+            ],
+            "0.5": [
+              30,
+              0,
+              0
+            ],
+            "1.0": [
+              -30,
+              0,
+              0
+            ]
+          }
+        },
+        "leftLeg": {
+          "rotation": {
+            "0": [
+              30,
+              0,
+              0
+            ],
+            "0.5": [
+              -30,
+              0,
+              0
+            ],
+            "1.0": [
+              30,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "carry": {
+      "loop": true,
+      "animation_length": 2.0,
+      "bones": {
+        "rightArm": {
+          "rotation": {
+            "0": [
+              -45,
+              10,
+              0
+            ]
+          }
+        },
+        "leftArm": {
+          "rotation": {
+            "0": [
+              -55,
+              -30,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "aim": {
+      "loop": true,
+      "animation_length": 2.0,
+      "bones": {
+        "rightArm": {
+          "rotation": {
+            "0": [
+              -85,
+              8,
+              0
+            ]
+          }
+        },
+        "leftArm": {
+          "rotation": {
+            "0": [
+              -90,
+              -35,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "shoot": {
+      "loop": true,
+      "animation_length": 0.2,
+      "bones": {
+        "rightArm": {
+          "rotation": {
+            "0": [
+              -85,
+              8,
+              0
+            ],
+            "0.05": [
+              -95,
+              8,
+              0
+            ],
+            "0.2": [
+              -85,
+              8,
+              0
+            ]
+          }
+        },
+        "leftArm": {
+          "rotation": {
+            "0": [
+              -90,
+              -35,
+              0
+            ],
+            "0.05": [
+              -98,
+              -35,
+              0
+            ],
+            "0.2": [
+              -90,
+              -35,
+              0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

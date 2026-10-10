@@ -1,0 +1,8 @@
+{
+  "type": "mbw:military_base",
+  "biomes": "#mbw:has_base",
+  "step": "surface_structures",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {},
+  "faction": "blue"
+}
